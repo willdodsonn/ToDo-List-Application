@@ -6,29 +6,24 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 //create your first component
 const Home = () => {
 	return (
-		<div id="container">
-			<h1 className="todo-header">todos</h1>
-			<input id="addToDo" type="text" placeholder="Add to do here" />
-			<ul className="list-group">
-				<li className="list-group-item">
-					<span>
+		<div className="todoListBox">
+			<div id="container">
+				<h1 className="todo-header">todos</h1>
+				<input id="addToDo" type="text" placeholder="Add to do here" />
+				<ul className="list-group">
+					<li className="list-group-item">
+						<span>Walk the dog</span> <FontAwesomeIcon icon={faX} />
+					</li>
+					<li className="list-group-item">
+						<span> Buy superpowers</span>{" "}
 						<FontAwesomeIcon icon={faX} />
-					</span>{" "}
-					Walk the dog
-				</li>
-				<li className="list-group-item">
-					<span>
+					</li>
+					<li className="list-group-item">
+						<span> Invest life savings into NFT's</span>{" "}
 						<FontAwesomeIcon icon={faX} />
-					</span>{" "}
-					Buy superpowers
-				</li>
-				<li className="list-group-item">
-					<span>
-						<FontAwesomeIcon icon={faX} />
-					</span>{" "}
-					Invest life savings into NFT's
-				</li>
-			</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 	);
 };
