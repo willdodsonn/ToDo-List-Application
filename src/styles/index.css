@@ -61,7 +61,15 @@ input#addToDo:focus {
 	background: white;
 	border: 2px solid skyblue;
 	outline: none;
-	transition: 0.1s;
+	
+}
+.icon{ 
+	float: right;
+	padding-top: 5px;
+}
+button{
+	font-size: 20px;
+	margin-left: 175px;
 }
 /* 
 
