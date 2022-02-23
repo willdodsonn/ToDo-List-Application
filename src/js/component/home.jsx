@@ -7,11 +7,21 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 //create your first component
 const Home = () => {
 	const [inputValue, setInputValue] = React.useState("");
+	const [arrayList, setArrayList] = React.useState("");
+	const addToArray = () => {
+		let arrayValue = arrayList;
+		arrayValue.push(inputValue);
+		setArrayList(arrayValue);
+		setInputValue("");
+		console.log(arrayList);
+	};
 	return (
 		<div className="todoListBox">
 			<div id="container">
 				<h1 className="todo-header">todos</h1>
-				<button type="submit">ADD</button>
+				<button onClick={addToArray} type="submit">
+					ADD
+				</button>
 				<input
 					id="addToDo"
 					type="text"
