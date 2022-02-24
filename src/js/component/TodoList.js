@@ -30,22 +30,23 @@ function TodoList() {
 	};
 	return (
 		<div className="todoListBox">
-			<div id="container"></div>
-			<div>
-				<h1 className="todo-header">todos</h1>
-				<ul className="list-group">
-					<TodoForm onSubmit={addTodo} />
-					<li className="list-group-item">
-						<Todo
-							id="addToDo"
-							type="text"
-							placeholder="Add to do here"
-							todos={todos}
-							completeTodo={completeTodo}
-							removeTodo={removeTodo}
-						/>
-					</li>
-				</ul>
+			<div id="container">
+				<div>
+					<h1 className="todo-header">todos</h1>
+					<ul className="list-group">
+						<TodoForm onSubmit={addTodo} />
+						<li className="list-group-item">
+							<Todo
+								id="addToDo"
+								type="text"
+								placeholder="Add to do here"
+								todos={todos}
+								completeTodo={completeTodo}
+								removeTodo={removeTodo}
+							/>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	);
