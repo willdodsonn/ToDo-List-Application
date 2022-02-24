@@ -32,7 +32,7 @@ function TodoList() {
 		<div className="todoListBox">
 			<div id="container">
 				<div>
-					<h1 className="todo-header">todos</h1>
+					<h1 className="todo-header">To-Dos</h1>
 					<ul className="list-group">
 						<TodoForm onSubmit={addTodo} />
 						<li className="list-group-item">

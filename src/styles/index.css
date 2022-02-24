@@ -1,7 +1,7 @@
 .todoListBox{
     width: 600px;
-    border: 5px solid rgb(130, 204, 192);
-	
+    border: 5px solid #83b4b4;
+	border-radius: 10px;
     margin: auto;
 }
 body{
@@ -65,8 +65,10 @@ input#addToDo {
 }
 button{
 	font-size: 20px;
+	margin-top: 10px;
 	margin-left: 265px;
-	background: rgb(124, 231, 196);
+	background: rgb(141, 226, 198);
+	border-radius: 10px;
 }
 .todo-row{
 	border-bottom: 1px solid black;
@@ -80,6 +82,7 @@ button{
 .list-group-item{
 	background-color: rgb(241, 233, 233);
 	border: none;
+	margin-bottom: none;
 }
 /* 
 
