@@ -59,7 +59,7 @@ input#addToDo {
 	/* float: right; */
 	position: relative;
 	left: 530px;
-	bottom: 20px;
+	bottom: 25px;
 	font-size: larger;
 	
 	
@@ -71,10 +71,11 @@ button{
 	background: rgb(141, 226, 198);
 	border-radius: 10px;
 }
+
 .todo-row{
 	border-bottom: 1px solid black;
 	font-size: large;
-	height: 50px;
+	height: 40px;
 }
 .todo-app{
 	margin-top: 100px;
