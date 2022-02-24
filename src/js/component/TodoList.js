@@ -1,34 +1,54 @@
-import React, { useState } from 'react'
-import Todo from './Todo';
-import TodoForm from './TodoForm'
+import React, { useState } from "react";
+import Todo from "./Todo";
+import TodoForm from "./TodoForm";
 function TodoList() {
-    const [todos, setTodos] = useState([]);
+	const [todos, setTodos] = useState([]);
 
-    const addToDo = todo => {
-        if (!todo.text || /^\s*$/.test(todo.text)) {
-            return;
-        }
-        const newTodos = [todo, ...todos]
-        setTodos(newTodos);
-    }
+	const addTodo = (todo) => {
+		if (!todo.text || /^\s*$/.test(todo.text)) {
+			//what the fuck is this ^^^
+			return;
+		}
+		const newTodos = [todo, ...todos];
+		setTodos(newTodos);
+	};
 
-    const completeTodo = id => {
-        let updatedTodos = todos.map(todo => {
-            if (todo.id === id) {
-                todo.isComplete = !todo.isComplete;
-            }
-            return todo;
-        });
-        setTodos(updatedTodos);
-    };
-    return (
-        <div>
-            <h1>Hello world</h1>
-            <TodoForm onSubmit={addToDo} />
-            <Todo todos={todos} completeTodo={completeTodo} />
+	const removeTodo = (id) => {
+		const removeArr = [...todos].filter((todo) => todo.id !== id);
 
-        </div>
-    );
-};
+		setTodos(removeArr);
+	};
 
-export default TodoList
+	const completeTodo = (id) => {
+		let updatedTodos = todos.map((todo) => {
+			if (todo.id === id) {
+				todo.isComplete = !todo.isComplete;
+			}
+			return todo;
+		});
+		setTodos(updatedTodos);
+	};
+	return (
+		<div className="todoListBox">
+			<div id="container"></div>
+			<div>
+				<h1 className="todo-header">todos</h1>
+				<ul className="list-group">
+					<TodoForm onSubmit={addTodo} />
+					<li className="list-group-item">
+						<Todo
+							id="addToDo"
+							type="text"
+							placeholder="Add to do here"
+							todos={todos}
+							completeTodo={completeTodo}
+							removeTodo={removeTodo}
+						/>
+					</li>
+				</ul>
+			</div>
+		</div>
+	);
+}
+
+export default TodoList;
