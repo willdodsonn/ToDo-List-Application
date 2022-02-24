@@ -45,7 +45,8 @@ input#addToDo {
 	font-size: 18px;
 	color: #7c7c7c;
 	background: #f8fbfc;
-	border-bottom: 3px solid rgb(116, 115, 115);
+	border: 1px solid #83b4b4;
+	border-bottom: 3px solid #83b4b4;
 	width: 100%;
 	padding: 10px 10px 10px 20px;
 	box-sizing: border-box;
